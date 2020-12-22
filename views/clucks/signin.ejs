@@ -1,0 +1,33 @@
+<%- include('../partials/header') %>
+<style>
+  .container{
+    border:1px solid black;
+    height:500px;
+    padding:10px;
+    margin-left: 50px; 
+    
+  }
+</style>
+<h3>Wireframes</h3>
+<div class="container p-3 my-3 ">
+  <a href="/index" >
+    <img src="https://a.slack-edge.com/production-standard-emoji-assets/10.2/google-medium/1f414@2x.png" alt=" White hen" style="float:left;width:50px;height:50px;">
+  </a>
+    <button type="button" class="btn btn-secondary" style="float:right;margin-right:5px;">Sign In</button>
+    <button type="button" class="btn btn-secondary" style="float:right;margin-right:10px;">Cluck!</button> 
+ <br><br>
+ <hr>
+<body>
+ <div>
+    <form action="/sign_in" method='POST' style="padding:10px;border:1px solid black;height:150px">
+      <div class="form-group">
+        <label for="uname">Username</label>
+        <input type="text" class="form-control" id="uname" placeholder="e.g. Madam Welminster" name="uname" required>   
+      </div>
+      <button type="submit" class="btn btn-outline-dark" style="float:right;padding:8px;width:150px;">Sign In</button>
+  </form>
+</div>
+
+</div>
+
+<%- include('../partials/footer') %>

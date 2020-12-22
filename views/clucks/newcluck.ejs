@@ -1,0 +1,39 @@
+<%- include('../partials/header') %>
+<style>
+  .container{
+    border:1px solid black;
+    height:550px;
+    padding:10px;
+    margin-left: 50px; 
+    
+  }
+</style>
+<h3>Wireframes</h3>
+<div class="container p-3 my-3 ">
+    <a href="/index">
+    <img src="https://a.slack-edge.com/production-standard-emoji-assets/10.2/google-medium/1f414@2x.png" alt=" White hen" style="float:left;width:50px;height:50px;">
+    </a>
+    <button type="button" class="btn btn-secondary" style="float:right;margin-right:5px;">Sign Out</button>
+    <span style="float:right;margin-right:10px;"><%= username %></span>
+    <button type="button" class="btn btn-secondary" style="float:right;margin-right:15px;">Cluck!</button> 
+    
+ <br><br>
+ <hr>
+<body>
+ <div>
+    <form action="/new_cluck" method='POST' style="padding:15px;border:1px solid black;height:360px;">
+      <div class="form-group">
+        <label for="content">Content</label><br>
+        <textarea cols='50' rows='5'  class="form-control" name='content' placeholder="whatchoo cluckin about?" required> </textarea>
+      </div>
+      <div class="form-group">
+        <label for="imageurl">Image Url</label>
+        <input type='url' id="imageurl" name="imageurl" class="form-control" placeholder="https://imgur.com/qM6KaEy.gifv">
+      </div>
+      <button type="submit" class="btn btn-outline-dark" style="float:right;padding:8px;width:150px;">cluck!</button>
+  </form>
+</div>
+
+</div>
+
+<%- include('../partials/footer') %>

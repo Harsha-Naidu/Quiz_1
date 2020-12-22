@@ -1,0 +1,36 @@
+<%- include('../partials/header') %>
+<h3>Wireframes</h3>
+<div class="container p-3 my-3 " style ="border:1px solid black">
+    
+    <img src="https://a.slack-edge.com/production-standard-emoji-assets/10.2/google-medium/1f414@2x.png" alt=" White hen" style="float:left;width:50px;height:50px;">
+    <a href="/sign_in">
+        <button type="button" class="btn btn-secondary" style="float:right;margin-right:5px;">Sign In</button>
+    </a>
+    <a href="/new_cluck">
+        <button type="button" class="btn btn-secondary" style="float:right;margin-right:10px;">Cluck!</button>
+    </a>   
+ <br><br>
+ <hr>
+<div>
+ <% for (let cluck of clucks) { %>
+    <div class='container' style="padding:10px;">
+        <div class="card">    
+            <div class='card-body'>
+                <div class="row">
+                    <div class="column">
+                    <img src="../images/hen-bird.jpg" style="width:40px;height:40px;">
+                    </div>
+                    <div class="column">
+                    <h5 class='card-title'><%= cluck.username %></h5> @ <%= time(cluck.created_at) %>  
+                    <p class='card-text'><%= cluck.content %></p>
+                    <% if(cluck.image_url) %>
+                    <img src="<%= cluck.image_url %>"  style="width:100px;height:100px;">
+                    </div>
+                    </div>
+            </div>
+        </div>
+    </div>
+  <% } %>
+</div>
+
+<%- include('../partials/footer') %>
