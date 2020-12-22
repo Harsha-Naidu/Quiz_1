@@ -16,15 +16,23 @@
     <div class='container' style="padding:10px;">
         <div class="card">    
             <div class='card-body'>
-                <div class="row">
+                <div class="row" style="column-gap:30px;">
                     <div class="column">
                     <img src="../images/hen-bird.jpg" style="width:40px;height:40px;">
                     </div>
                     <div class="column">
-                    <h5 class='card-title'><%= cluck.username %></h5> @ <%= time(cluck.created_at) %>  
-                    <p class='card-text'><%= cluck.content %></p>
+                    <div class= row>
+                        <h5 class='card-title'><%= cluck.username %></h5>
+                    <span>
+                        <ul>
+                            <li><%= time(cluck.created_at) %> </li>
+                        </ul>
+                    </span>
+                    </div>
+                        <p class='card-text'><%= cluck.content %></p>
                     <% if(cluck.image_url) %>
-                    <img src="<%= cluck.image_url %>"  style="width:100px;height:100px;">
+                        <img src="<%= cluck.image_url %>"  style="width:100px;height:100px;">
+                    
                     </div>
                     </div>
             </div>

@@ -49,5 +49,11 @@ router.get('/index', (req, res) => {
 });
 
 
+//sign-out
+router.post('/sign_out',(req,res) => {
+  res.clearCookie('username')
+  res.redirect('/index')
+});
+
 
 module.exports = router;
